@@ -4,6 +4,7 @@ const express = require('express');
 const {connectDB} = require('./config/db.config.js');
 const rootRoutes = require('./routes/root.routes.js');
 const urlRoutes = require('./routes/url.routes.js');
+const {logReqRes} = require('./middleware/log.middleware.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,6 +15,7 @@ connectDB(connectionString)
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(logReqRes('./logs/logs.json'));
 
 app.use('/', rootRoutes);
 app.use('/url', urlRoutes);
