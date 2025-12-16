@@ -6,9 +6,11 @@ async function handleGenerateShortUrl (req, res) {
     const shortUrlID = nanoid(8);
     const newShortUrl = await shortUrl.create({
         shortid : shortUrlID,
-        redirectUrl : req.query.url,
+        redirectUrl : req.body.url,
     });
-    return res.status(201).json({shortUrl: shortUrlID});
+    return res.status(201).render('index.ejs', {
+        shortUrl: shortUrlID
+    });
 }
 
 async function handleGetAnalyticsById (req, res) {

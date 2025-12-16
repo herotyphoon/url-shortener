@@ -1,9 +1,10 @@
 const express = require('express');
 
-const {handleGetUrlById} = require('../controller/root.controller.js');
+const {handleGetUrlById,handleGetHomePage} = require('../controller/root.controller.js');
 
 const router = express.Router();
 
-router.get('/:id', handleGetUrlById);
+router.get('/', handleGetHomePage)
+router.get('/u/:id', handleGetUrlById);
 
 module.exports = router;
