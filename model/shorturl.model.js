@@ -13,6 +13,10 @@ const shortUrlSchema = new mongoose.Schema({
     clicks : {
         type: Number,
         default: 0
+    },
+    createdBy : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'users'
     }
 },
     { timestamps: true }

@@ -7,10 +7,10 @@ async function handleGenerateShortUrl (req, res) {
     const newShortUrl = await shortUrl.create({
         shortid : shortUrlID,
         redirectUrl : req.body.url,
+        createdBy : req.user._id,
     });
-    return res.status(201).render('index.ejs', {
-        shortUrl: shortUrlID
-    });
+    res.cookie("shortUrl", shortUrlID, { httpOnly: false });
+    return res.status(201).redirect('/pages');
 }
 
 async function handleGetAnalyticsById (req, res) {
