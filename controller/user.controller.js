@@ -1,7 +1,7 @@
 const { v4 : uuid } = require('uuid');
 
 const User = require('../model/user.model.js');
-const {setUser} = require('../service/auth.service.js');
+const {getUser,setUser} = require('../service/auth.service.js');
 
 async function handleUserSignUp (req, res) {
     const { name, email, password } = req.body;
@@ -23,10 +23,9 @@ async function handleUserLogin (req, res) {
     }
 
     if (user.password === password) {
-        const sessionID = uuid();
-        setUser(sessionID, user);
-        res.cookie('sessionID', sessionID, { httpOnly: true });
-        req.user = user;
+        const token = setUser(user);
+        res.cookie('sessionID', token, { httpOnly: true });
+        req.user = getUser(token);
         return res.redirect('/pages');
     } else {
         return res.status(404).render('login', {

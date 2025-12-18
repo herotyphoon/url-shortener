@@ -6,7 +6,11 @@ async function handleRenderHomePage (req, res) {
 
     }
     const urls = await shortUrl.find({ createdBy: req.user._id });
-    return res.render('index', { urls, shortUrl: req.cookies.shortUrl });
+    res.render('index', {
+        urls,
+        user: req.user,
+        shortUrl: req.cookies.shortUrl || null
+    });
 }
 
 async function handleRenderSignup (req, res) {

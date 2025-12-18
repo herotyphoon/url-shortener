@@ -26,10 +26,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(logReqRes('./logs/logs.json'));
 
-app.use('/', rootRoutes);
+app.use('/user', userRoutes);     // login, signup first
 app.use('/pages', checkAuth, pageRoutes);
 app.use('/url', restrictToLoggedInUser, urlRoutes );
-app.use('/user', userRoutes);
+app.use('/', rootRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port http://localhost:${port}`);
