@@ -1,27 +1,58 @@
 const fs = require("fs");
+const path = require("path");
 
 function logReqRes(filename) {
+    const logPath = path.resolve(filename);
+
+    // Ensure file exists and starts as a JSON array
+    if (!fs.existsSync(logPath)) {
+        fs.writeFileSync(logPath, "[]", "utf-8");
+    }
+
     return (req, res, next) => {
 
-        // Skip browser favicon requests
         if (req.url === "/favicon.ico") return next();
 
-        const start = Date.now();
+        const start = process.hrtime.bigint();
 
         res.on("finish", () => {
-            const duration = Date.now() - start;
+            const end = process.hrtime.bigint();
+            const durationMs = Number(end - start) / 1e6;
 
-            const logLine = {
-                DateTime: new Date().toLocaleString(),
-                Method: req.method,
-                Url: req.originalUrl,
-                resolveStatus: res.statusCode,
-                TimeTaken: `${duration}ms`,
+            const logEntry = {
+                timestamp: new Date().toISOString(),
+                method: req.method,
+                url: req.originalUrl,
+                status: res.statusCode,
+                timeTakenMs: Number(durationMs.toFixed(2)),
                 userAgent: req.headers["user-agent"] || "unknown-agent"
             };
 
-            fs.appendFile(filename, JSON.stringify(logLine), (err) => {
-                if (err) console.error("Logging Error:", err);
+            fs.readFile(logPath, "utf-8", (err, data) => {
+                if (err) {
+                    console.error("Log Read Error:", err.message);
+                    return;
+                }
+
+                let logs;
+                try {
+                    logs = JSON.parse(data);
+                    if (!Array.isArray(logs)) logs = [];
+                } catch {
+                    logs = [];
+                }
+
+                logs.push(logEntry);
+
+                fs.writeFile(
+                    logPath,
+                    JSON.stringify(logs, null, 2),
+                    (err) => {
+                        if (err) {
+                            console.error("Log Write Error:", err.message);
+                        }
+                    }
+                );
             });
         });
 
@@ -29,4 +60,4 @@ function logReqRes(filename) {
     };
 }
 
-module.exports = {logReqRes};
+module.exports = { logReqRes };
