@@ -27,11 +27,11 @@ app.use(cookieParser());
 app.use(logReqRes('./logs/logs.json'));
 app.use(checkForAuthentication);
 
-app.use('/user', userRoutes);     // login, signup first
+app.use('/user', userRoutes);
 app.use('/pages', pageRoutes);
 app.use('/url', restrictTo(['NORMAL']), urlRoutes );
 app.use('/', rootRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port http://localhost:${port}`);
-})
+});
