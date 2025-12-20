@@ -1,25 +1,23 @@
 const {getUser} = require('../service/auth.service.js')
 
-async function restrictToLoggedInUser (req, res, next) {
+function checkForAuthentication (req, res, next){
     const sessionID = req.cookies?.sessionID;
+    req.user = null;
+    if (!sessionID) return next();
 
-    if (!sessionID) return res.redirect('/pages/login');
-
-    const user = getUser(sessionID);
-
-    if (!user) return res.redirect('/pages/login');
-
-    req.user = user;
-    next();
+    req.user = getUser(sessionID);
+    return next();
 }
 
-async function checkAuth(req, res, next) {
-    const sessionID = req.cookies?.sessionID;
-    if (sessionID) {
-        req.user = getUser(sessionID);
-    }
-    next();
+function restrictTo (roles = []){
+    return function (req, res, next){
+        if (!req.user) return res.redirect('/pages/login');
+
+        if (!roles.includes(req.user.role)) return res.end('Not authorized');
+
+        next();
+    };
 }
 
 
-module.exports = {restrictToLoggedInUser, checkAuth};
+module.exports = {checkForAuthentication, restrictTo};

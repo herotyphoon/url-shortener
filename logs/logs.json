@@ -350,5 +350,221 @@
     "status": 404,
     "timeTakenMs": 0.37,
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:25:56.391Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 304,
+    "timeTakenMs": 2.96,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:25:56.433Z",
+    "method": "GET",
+    "url": "/.well-known/appspecific/com.chrome.devtools.json",
+    "status": 404,
+    "timeTakenMs": 0.3,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:26:36.088Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 302,
+    "timeTakenMs": 0.4,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:26:36.091Z",
+    "method": "GET",
+    "url": "/pages/login",
+    "status": 304,
+    "timeTakenMs": 1.03,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:26:36.134Z",
+    "method": "GET",
+    "url": "/.well-known/appspecific/com.chrome.devtools.json",
+    "status": 404,
+    "timeTakenMs": 0.3,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-18T10:44:00.795Z",
+    "method": "GET",
+    "url": "/.well-known/appspecific/com.chrome.devtools.json",
+    "status": 404,
+    "timeTakenMs": 6.22,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:03:51.912Z",
+    "method": "GET",
+    "url": "/",
+    "status": 302,
+    "timeTakenMs": 5.86,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:03:51.918Z",
+    "method": "GET",
+    "url": "/pages/",
+    "status": 302,
+    "timeTakenMs": 0.96,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:03:51.930Z",
+    "method": "GET",
+    "url": "/pages/login",
+    "status": 304,
+    "timeTakenMs": 7.62,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:04:00.338Z",
+    "method": "POST",
+    "url": "/user/login",
+    "status": 302,
+    "timeTakenMs": 16.45,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:04:19.583Z",
+    "method": "GET",
+    "url": "/.well-known/appspecific/com.chrome.devtools.json",
+    "status": 404,
+    "timeTakenMs": 1,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:05:04.704Z",
+    "method": "POST",
+    "url": "/user/login",
+    "status": 302,
+    "timeTakenMs": 4.89,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:05:16.897Z",
+    "method": "GET",
+    "url": "/pages/home",
+    "status": 404,
+    "timeTakenMs": 2.35,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:05:55.724Z",
+    "method": "GET",
+    "url": "/pages/login",
+    "status": 304,
+    "timeTakenMs": 2.32,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:05:55.769Z",
+    "method": "GET",
+    "url": "/.well-known/appspecific/com.chrome.devtools.json",
+    "status": 404,
+    "timeTakenMs": 0.99,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:06:08.784Z",
+    "method": "POST",
+    "url": "/user/login",
+    "status": 302,
+    "timeTakenMs": 3.95,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:07:59.223Z",
+    "method": "GET",
+    "url": "/pages/login",
+    "status": 304,
+    "timeTakenMs": 1.4,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:08:07.485Z",
+    "method": "POST",
+    "url": "/user/login",
+    "status": 302,
+    "timeTakenMs": 3.94,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:10:20.322Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 200,
+    "timeTakenMs": 26.26,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:10:43.233Z",
+    "method": "POST",
+    "url": "/url",
+    "status": 302,
+    "timeTakenMs": 14.32,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:10:43.241Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 200,
+    "timeTakenMs": 4.21,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:10:44.619Z",
+    "method": "GET",
+    "url": "/u/2lYrNv8P",
+    "status": 302,
+    "timeTakenMs": 8.6,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:10:50.246Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 200,
+    "timeTakenMs": 4.22,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:20:13.086Z",
+    "method": "POST",
+    "url": "/user/login",
+    "status": 302,
+    "timeTakenMs": 19.86,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:20:13.089Z",
+    "method": "GET",
+    "url": "/pages",
+    "status": 200,
+    "timeTakenMs": 0.98,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:20:25.755Z",
+    "method": "GET",
+    "url": "/pages/admin",
+    "status": 200,
+    "timeTakenMs": 11.99,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+  },
+  {
+    "timestamp": "2025-12-20T10:20:45.577Z",
+    "method": "GET",
+    "url": "/pages/admin",
+    "status": 304,
+    "timeTakenMs": 5.61,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
   }
 ]
